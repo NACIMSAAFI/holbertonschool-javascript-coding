@@ -2,10 +2,7 @@
 
 const request = require('request');
 
-const url = process.argv[2];
-const characterId = 18;
-
-request(url, (err, response, body) => {
+request(process.argv[2], (err, response, body) => {
   if (err) {
     console.error('Error:', err);
   } else {
@@ -14,7 +11,7 @@ request(url, (err, response, body) => {
     let count = 0;
 
     films.forEach(film => {
-      if (film.characters.includes(`https://swapi-api.hbtn.io/api/people/${characterId}/`)) {
+      if (film.characters.includes(`https://swapi-api.hbtn.io/api/people/${18}/`)) {
         count++;
       }
     });
