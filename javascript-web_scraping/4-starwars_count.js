@@ -2,7 +2,7 @@
 
 const request = require('request');
 
-request(process.argv[2], (err, response, body) => {
+request(process.argv[2], function(err, response, body) {
   if (err) {
     console.error('Error:', err);
   } else {
