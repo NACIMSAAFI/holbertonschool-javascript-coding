@@ -1,5 +1,13 @@
 import fs from 'fs';
 
+/**
+ * Reads the data of students in a CSV data file.
+ * @param : The path to the CSV data file.
+ * @returns : {Promise<{
+ *   String: {firstname: String, lastname: String, age: number}[]
+ * }>}
+ */
+ 
 export function readDatabase(filePath) {
   return new Promise((resolve, reject) => {
     fs.readFile(filePath, 'utf8', (err, data) => {
